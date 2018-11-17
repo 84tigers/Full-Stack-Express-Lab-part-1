@@ -1,8 +1,6 @@
 "use strict";
 const cartList = {
-    template: `
-    <p>{{ $ctrl.cart[1].product }}</p>
-    `,
+    templateUrl: "app/components/cart-list/cart-list.html",
     controller: ["CartService", function(CartService) {
         const vm = this;
         

@@ -4,7 +4,7 @@ function CartService($http) {
     self.getAllItems = () => {
         return $http({
             method: "GET",
-            url: "/items"
+            url: "/cart-items"
         });
     };
 };
