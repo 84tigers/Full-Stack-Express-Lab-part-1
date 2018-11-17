@@ -5,29 +5,29 @@ const items = express.Router();
 
 const cart = [
     {
-        id: 0,
-        product: "Cat Food",
+        id: 1,
+        product: "Skateboard Deck",
         price: 8,
         quantity: 1
     },
     {
         id: 2,
-        product: "Cat Litter",
+        product: "Trucks",
         price: 6,
         quantity: 2
     },
     {
         id: 3,
-        product: "Catnip",
+        product: "Wheels",
         price: 5,
         quantity: 1
     }
 ];
 
-items.get("/items", (req, res) => {
+cartItems.get("/cart-items", (req, res) => {
     res.json(cart);
 });
 
 
 
-module.exports = items;
+module.exports = cart;

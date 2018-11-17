@@ -1,7 +1,7 @@
 "use strict";
-function ListService($http) {
+function CartService($http) {
     const self = this;
-    self.getItems = () => {
+    self.getAllItems = () => {
         return $http({
             method: "GET",
             url: "/items"
@@ -11,4 +11,4 @@ function ListService($http) {
 
 angular
     .module("ShoppingCart")
-    .service("ListService", ListService);
+    .service("CartService", CartService);

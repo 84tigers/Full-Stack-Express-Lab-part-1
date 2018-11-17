@@ -2,7 +2,7 @@
 
 const express = require("express");
 const app = express();
-const items = require("./items");
+const items = require("./cart-items");
 
 app.use(express.static("./public"))
 app.use(express.json());
