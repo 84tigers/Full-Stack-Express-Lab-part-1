@@ -7,7 +7,7 @@ const cart = [
     {
         id: 1,
         product: "Natas Kaupus - Santa Monica Airlines Pro-model Deck",
-        price: 56.00,
+        price: 56.55,
         quantity: 1
     },
     {

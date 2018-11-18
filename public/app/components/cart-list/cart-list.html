@@ -1,5 +1,28 @@
-<ul ng-repeat="item in $ctrl.cart" >
+<table class="cart">
+    <tr class="cart__header">
+        <th class="cart__header__title">SKU</th>
+        <th class="cart__header__title">PRODUCT</th>
+        <th class="cart__header__title">QUANT</th>
+        <th class="cart__header__title">PRICE</th>
+    </tr>
+    <tr class="cart__info" ng-repeat="item in $ctrl.cart">
+        <td class="cart__info__details text--left">{{ item.id }}</td>
+        <td class="cart__info__details">{{ item.product }}</td>
+        <td class="cart__info__details text--center">-{{ item.quantity }}-</td>
+        <td class="cart__info__details text--right">${{ item.price }}</td>
+    </tr>
+    <tr class="cart__total">
+        <th colspan="3" class="cart__total__title">TOTAL:</th>
+        <td class="cart__total__total"></td>
+    </tr>
+</table>
+
+
+
+
+
+<!-- <ul  >
     <li class="item-details">
-        <p class="item-idnum">{{ item.id }}</p><p class="item-product">{{ item.product }}</p><p class="item-price">{{ item.price }}</p><p class="item-quantity">{{ item.quantity }}</p>
+        <p class="item-idnum"></p><p class="item-product">{{ item.product }}</p><p class="item-price">{{ item.price }}</p><p class="item-quantity">{{ item.quantity }}</p>
     </li>
-</ul>
+</ul> -->
