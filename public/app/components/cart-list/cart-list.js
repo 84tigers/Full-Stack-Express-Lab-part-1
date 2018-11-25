@@ -11,6 +11,9 @@ const cartList = {
         vm.addItem = (newItem) => {
             CartService.addItem(newItem).then((result) => {
                 vm.cart = result.data;
+                vm.newItem.product = "";
+                vm.newItem.price = "";
+                vm.newItem.quantity = "";
             });
         };
         vm.removeItem = (id) => {

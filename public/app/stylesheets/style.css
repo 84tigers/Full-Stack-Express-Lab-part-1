@@ -89,7 +89,7 @@ body {
     font-family: 'Share Tech Mono', monospace;
     font-weight: normal;
     color: white;
-    width: 90%;
+    width: 40%;
     margin: 10% 5% 0 5%;
 }
 
@@ -113,13 +113,62 @@ body {
 
 .cart__info__details {
     border-bottom: 1px solid gray;
-
 }
+
+.cart__info__details--input{
+    width: 3.5em;
+    border-bottom: 1px solid gray;
+    
+}
+
+.cart__info__details__input {
+    display: block;
+    margin: auto;
+    width: 3em;
+    border: none;
+    background-color: black;
+    color: aqua;
+    
+}
+
+.cart__info__details__input:focus{
+    outline: none !important;
+    /* border: 1px dotted #ff3493; */
+    /* box-shadow: 0 0 10px #719ECE; */
+    background-color: rgb(80, 80, 80);
+}
+
+.cart__info__details--btn {
+    border: none;
+    /* background-color: white; */
+    color: black;
+}
+
+.cart__info__details__btn {
+    color: black;
+    background-color: grey;
+    padding-top: 2px;
+    border-radius: 2px;
+    width: 1em;
+    font-weight: 900;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.cart__info__details__btn:hover {
+    background-color: #ff3493;
+}
+
+/* input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      background-color: #ff3493;
+      margin: 0; 
+} */
 
 .cart__total__title {
     border-top: 1px solid #ff3493;
     text-align: right;
-    
 }
 
 

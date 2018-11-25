@@ -17,7 +17,7 @@ function CartService($http) {
     self.removeItem = (id) => {
         return $http({
             method: "DELETE",
-            url: `/cart-items${id}`,
+            url: `/cart-items/${id}`,
         });
     };
     self.updateItem = (editedItem) => {
