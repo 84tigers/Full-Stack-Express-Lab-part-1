@@ -4,11 +4,25 @@ const cartList = {
     controller: ["CartService", function(CartService) {
         const vm = this;
         
-        CartService.getAllItems().then((response) => {
-            console.log(response);
-            vm.cart = response.data;
+        CartService.getAllItems().then((result) => {
+            console.log(result);
+            vm.cart = result.data;
         });
-        
+        vm.addItem = (newItem) => {
+            CartService.addItem(newItem).then((result) => {
+                vm.cart = result.data;
+            });
+        };
+        vm.removeItem = (id) => {
+            CartService.removeItem(id).then((result) => {
+                vm.cart = result.data;
+            });
+        };
+        vm.updateItem = (editedItem) => {
+            CartService.updateItem(editedItem).then((result) => {
+                vm.cart = result.data;
+            });
+        };
     }]
 };
 
