@@ -85,6 +85,12 @@ body {
     height: 100px;
 }
 
+.form-cart-cntnr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .cart {
     font-family: 'Share Tech Mono', monospace;
     font-weight: normal;
@@ -121,14 +127,36 @@ body {
     
 }
 
-.cart__info__details__input {
+.cart__info__details__input, .add-form__input{
     display: block;
     margin: auto;
     width: 3em;
     border: none;
     background-color: black;
     color: aqua;
-    
+}
+
+.add-form__input {
+    width: 10em;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2em;
+}
+
+.add-form__input:hover{
+    background-color: rgb(80, 80, 80);
+}
+
+.add-form__input:focus{
+    outline: none !important;
+    /* border: 1px dotted #ff3493; */
+    /* box-shadow: 0 0 10px #719ECE; */
+    background-color: rgb(80, 80, 80);
+}
+
+
+
+.cart__info__details__input:hover{
+    background-color: rgb(80, 80, 80);
 }
 
 .cart__info__details__input:focus{

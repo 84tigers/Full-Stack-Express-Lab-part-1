@@ -1,30 +1,34 @@
-<form class="cart" ng-submit="$ctrl.addItem($ctrl.newItem);">
-    <input class="product-input" type="text" ng-model="$ctrl.newItem.product" placeholder="Product">
-    <input class="product-input" type="text" ng-model="$ctrl.newItem.price" placeholder="Price">
-    <input class="product-input" type="text" ng-model="$ctrl.newItem.quantity" placeholder="Quantity">
-    <button>Add Item</button>
-</form>
-<table class="cart">
-    <tr class="cart__header">
-        <th class="cart__header__title">SKU</th>
-        <th class="cart__header__title">PRODUCT</th>
-        <th class="cart__header__title">QUANTITY</th>
-        <th class="cart__header__title">PRICE</th>
-        <th class="cart__header__title">REMOVE</th>
-    </tr>
-    <tr class="cart__info" ng-repeat="item in $ctrl.cart">
-        <td class="cart__info__details text--left">{{ item.id }}</td>
-        <td class="cart__info__details">{{ item.product }}</td>
-        <td class="cart__info__details--input"><input class="cart__info__details__input text--right" type="number" ng-blur="$ctrl.updateItem(item);" ng-model="item.quantity"></td>
-        <td class="cart__info__details text--right">${{ item.price }}</td>
-        <td class="cart__info__details--btn text--center" ><p class="cart__info__details__btn" ng-click="$ctrl.removeItem(item.id);">X</p></td>
-    </tr>
-    <tr class="cart__total">
-        <th colspan="3" class="cart__total__title">TOTAL:</th>
-        <td class="cart__total__total"></td>
-    </tr>
-</table>
-
+<section class="form-cart-cntnr">
+    <form class="add-form cart" ng-submit="$ctrl.addItem($ctrl.newItem);">
+        <input class="add-form__input longer--input" type="text" ng-model="$ctrl.newItem.product" placeholder="Product">
+        <input class="add-form__input" type="text" ng-model="$ctrl.newItem.price" placeholder="Price">
+        <input class="add-form__input" type="text" ng-model="$ctrl.newItem.quantity" placeholder="Quantity">
+        <button>Add Item</button>
+    </form>
+    <table class="cart">
+        <tr class="cart__header">
+            <th class="cart__header__title">SKU</th>
+            <th class="cart__header__title">PRODUCT</th>
+            <th class="cart__header__title">QUANTITY</th>
+            <th class="cart__header__title">PRICE</th>
+            <th class="cart__header__title">REMOVE</th>
+        </tr>
+        <tr class="cart__info" ng-repeat="item in $ctrl.cart">
+            <td class="cart__info__details text--left">{{ item.id }}</td>
+            <td class="cart__info__details">{{ item.product }}</td>
+            <td class="cart__info__details--input"><input class="cart__info__details__input text--right" type="number"
+                    ng-blur="$ctrl.updateItem(item);" ng-model="item.quantity"></td>
+            <td class="cart__info__details text--right">${{ item.price }}</td>
+            <td class="cart__info__details--btn text--center">
+                <p class="cart__info__details__btn" ng-click="$ctrl.removeItem(item.id);">X</p>
+            </td>
+        </tr>
+        <tr class="cart__total">
+            <th colspan="3" class="cart__total__title">TOTAL:</th>
+            <td class="cart__total__total"></td>
+        </tr>
+    </table>
+</section>
 
 
 
